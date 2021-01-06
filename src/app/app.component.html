@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="text-center">
+  Juego de Cartas
+</mat-toolbar>
+
+<div class="p-16">
+  <strong class="text-center">Toca la carta para voltearla</strong>
+  <div class="grid p-16">
+    <app-cartas 
+      *ngFor="let c of cards; let idx=index" 
+      [data]="c" 
+      (cardClicked)="cardClicked(idx)">
+    </app-cartas>
+  </div>
+</div>
+
+
